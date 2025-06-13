@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>FakeFlix</title>
+    <style>
+      body {
+        margin: 0;
+        background-color: #141414;
+        font-family: Arial, sans-serif;
+        color: #fff;
+      }
+
+      header {
+        background-color: #000;
+        padding: 1rem 2rem;
+        font-size: 2rem;
+        font-weight: bold;
+        color: #e50914;
+      }
+
+      .section-title {
+        margin: 1.5rem 2rem 1rem;
+        font-size: 1.4rem;
+        font-weight: bold;
+      }
+
+      .movie-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        max-width: 1300px;
+        margin: 0 auto;
+        gap: 1rem;
+        padding: 0 2rem 2rem;
+      }
+
+      .movie-card {
+        background-color: #222;
+        border-radius: 5px;
+        overflow: hidden;
+        transition: transform 0.2s ease-in-out;
+      }
+
+      .movie-card:hover {
+        transform: scale(1.05);
+      }
+
+      .movie-thumb {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+      }
+
+      .movie-title {
+        padding: 0.5rem;
+        font-size: 0.95rem;
+        text-align: center;
+      }
+
+      a {
+        color: #e50914;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <header>MetFlix</header>
+
+    <div class="section-title">All Movies</div>
+    <div class="movie-grid" id="movie-container"></div>
+    <script src="../static/js/front-page.js"></script>
+  </body>
+</html>

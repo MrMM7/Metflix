@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Watch -</title>
+    <style>
+      body {
+        margin: 0;
+        background-color: #000;
+        color: #fff;
+        font-family: Arial, sans-serif;
+      }
+      header {
+        background-color: #111;
+        padding: 1rem 2rem;
+        font-size: 1.3rem;
+        color: #e50914;
+      }
+      .container {
+        padding: 2rem;
+        text-align: center;
+      }
+      video {
+        width: 90%;
+        max-width: 1000px;
+        border: 2px solid #e50914;
+        border-radius: 10px;
+      }
+      .movie-title {
+        margin-top: 1rem;
+        font-size: 2rem;
+      }
+      .movie-description {
+        margin: 1rem auto;
+        max-width: 800px;
+        font-size: 1rem;
+        color: #ccc;
+      }
+      a.back-link {
+        color: #e50914;
+        text-decoration: none;
+        margin-top: 2rem;
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <header>FakeFlix</header>
+    <div class="container">
+      <video controls>
+        <source src="" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div class="movie-title"></div>
+      <div class="movie-description"></div>
+      <a class="back-link" href="/home">← Back to Home</a>
+    </div>
+    <script type="module" src="../static/js/watch.js"></script>
+  </body>
+</html>
