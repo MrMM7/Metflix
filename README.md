@@ -44,6 +44,14 @@ Simply put your files inside the movies and thumnail folder than in your termina
 python folderParser.py
 ```
 
+or alternatively when starting the server write
+
+```
+python server.py --parsefolders
+```
+
+to automatically parse the folders
+
 **Note**: the movie name and the thumbnail name MUST match or it will not work correctly
 
 ---
