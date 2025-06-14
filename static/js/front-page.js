@@ -12,7 +12,9 @@ function addMovie(name, imageName, id) {
 }
 
 let allMovies = [];
-fetch("/api/all-movies")
+fetch("/api/movies/all-movies", {
+  method: "GET",
+})
   .then((res) => {
     if (!res.ok) {
       throw new Error("Could not GET from movies server");

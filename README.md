@@ -21,7 +21,7 @@ A streaming service web app — a recreation of my past non-functioning streamin
 
 ---
 
-### 2. Update `db.json`
+### 2. Update `db.json`, Manual
 
 Add an entry for each movie in `db.json` like this:
 
@@ -35,6 +35,16 @@ Add an entry for each movie in `db.json` like this:
 ```
 
 Make sure the paths match the files you added in step 1.
+
+### 2.5. Update `db.json`, Automatic
+
+Simply put your files inside the movies and thumnail folder than in your terminal write:
+
+```
+python folderParser.py
+```
+
+**Note**: the movie name and the thumbnail name MUST match or it will not work correctly
 
 ---
 
