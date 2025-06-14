@@ -1,9 +1,9 @@
-function addMovie(name, imageName) {
+function addMovie(name, imageName, id) {
   let containerDiv = document.getElementById("movie-container");
   let htmlTemplate = `
     <div class="movie-card">
-    <a href="/watch?m=${encodeURI(name)}">
-    <img class="movie-thumb" src="../static/movies/${imageName}" alt="Movie 1" />
+    <a href="/watch?id=${id}">
+    <img class="movie-thumb" src="../static/thumbnail/${imageName}"/>
     <div class="movie-title">${name}</div>
     </a>
     </div>
@@ -23,7 +23,7 @@ fetch("/api/all-movies")
     allMovies.push(obj);
     const moviesArray = Object.values(allMovies[0]);
     moviesArray.forEach((item) => {
-      addMovie(item.m, item.mc);
+      addMovie(item.m, item.mc, item.id);
     });
   })
   .catch((err) => console.error(err));

@@ -3,6 +3,7 @@ import json
 import threading
 import webbrowser
 
+auto_open_browser = True
 app = Flask(__name__)
 jsonfile_data = []
 
@@ -12,7 +13,7 @@ with open("db.json", 'r') as f:
 
 # main page
 @app.route('/home')
-def index():
+def home_page():
     return render_template("front-page.html")
 
 # watching page
@@ -21,19 +22,15 @@ def watching_page():
     return render_template("watch.html")
 
 # returns the requested movie by the front-end
-@app.route('/api/movies/<name>', methods=['GET'])
-def get_movie(name: str):
-    print("🔎 API received request for:", name)
-    print("📦 Current jsonfile_data:", jsonfile_data)
-
-    for movie in jsonfile_data.values():  #type: ignore
-        print("🔍 Comparing with:", movie['m'])  # Debug print    #type: ignore
-        if movie['m'] == name:
-            print("✅ Match found!")
-            return jsonify(movie)
-
-    print("❌ Movie not found!")
-    return jsonify({'error': 'Movie not found'}), 404
+@app.route('/api/movies/<int:id>', methods=['GET'])
+def get_movie(id: int):
+    for i in range(len(jsonfile_data)):
+        if jsonfile_data[i]['id'] == id:
+            print(jsonfile_data[i])
+            return jsonify(jsonfile_data[i]), 200
+        
+    return jsonify(f"Movie does not exist id:{id}"), 404
+    
 
 # sends the db.json file to the front-end
 @app.route('/api/all-movies', methods=['GET'])
@@ -46,5 +43,6 @@ def open_browser():
     webbrowser.open_new_tab("http://localhost:5000/home")
 
 if __name__ == "__main__":
-    threading.Timer(1.0, open_browser).start()
+    if auto_open_browser: threading.Timer(1.0, open_browser).start()
+
     app.run()
