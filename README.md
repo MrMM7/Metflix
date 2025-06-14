@@ -52,7 +52,9 @@ python server.py --parsefolders
 
 to automatically parse the folders
 
-**Note**: the movie name and the thumbnail name MUST match or it will not work correctly
+**Note**: the movie name and the thumbnail name MUST match or it will not work correctly.
+additionally all entries automatically get deleted and replaced by new ones by folderParser
+when running folderParser.py. also db.json MUST be empty or it'll bug out 
 
 ---
 
