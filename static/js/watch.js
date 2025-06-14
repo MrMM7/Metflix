@@ -16,7 +16,7 @@ fetch("/api/all-movies")
     allMovies.push(obj);
     const moviesArray = Object.values(allMovies[0]);
     moviesArray.forEach((item) => {
-      videoPlayer.src = `../${item.ms}`;
+      videoPlayer.src = `../static/movies/${item.ms}`;
       descriptionBox.innerHTML = item.d;
       movieNameDiv.innerHTML = item.m;
       document.title = `Watch - ${movieName}`;

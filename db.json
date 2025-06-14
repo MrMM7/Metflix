@@ -1,8 +1,8 @@
 {
   "1": {
     "m": "Morbius",
-    "ms": "static/movies/movie1.mp4",
-    "mc": "static/thumbnail/Morbius.jpg",
+    "ms": "movie1.mp4",
+    "mc": "Morbius.jpg",
     "d": "funny green guy"
   }
 }

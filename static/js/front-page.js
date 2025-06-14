@@ -3,7 +3,7 @@ function addMovie(name, imageName) {
   let htmlTemplate = `
     <div class="movie-card">
     <a href="/watch?m=${encodeURI(name)}">
-    <img class="movie-thumb" src="../${imageName}" alt="Movie 1" />
+    <img class="movie-thumb" src="../static/movies/${imageName}" alt="Movie 1" />
     <div class="movie-title">${name}</div>
     </a>
     </div>

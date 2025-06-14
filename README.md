@@ -6,9 +6,9 @@ A streaming service web app — a recreation of my past non-functioning streamin
 
 ## Features
 
-- Browse a library of movies  
-- Watch movies with video player  
-- Movie details with cover image and description  
+- Browse a library of movies
+- Watch movies with video player
+- Movie details with cover image and description
 
 ---
 
@@ -16,8 +16,8 @@ A streaming service web app — a recreation of my past non-functioning streamin
 
 ### 1. Add Your Movies & Covers
 
-- Put your movie files inside the `static/movies/` folder.  
-- Put your movie cover images inside the `static/thumbnail/` folder.  
+- Put your movie files inside the `static/movies/` folder.
+- Put your movie cover images inside the `static/thumbnail/` folder.
 
 ---
 
@@ -27,10 +27,10 @@ Add an entry for each movie in `db.json` like this:
 
 ```json
 "1": {
-  "m": "Morbius",                                   // Movie name
-  "ms": "static/movies/movie1.mp4",                 // Movie source (file path)
-  "mc": "static/thumbnail/Morbius.jpg",             // Movie cover image path
-  "d": "funny green guy"                            // Description
+  "m": "Morbius",                  // Movie name
+  "ms": "movie1.mp4",              // Movie source (file name)
+  "mc": "Morbius.jpg",             // Movie cover image name
+  "d": "funny green guy"           // Description
 }
 ```
 
@@ -57,16 +57,16 @@ http://localhost:5000/home
 ## Notes
 
 - The front-end UI design was generated with the help of AI, but all the programming and backend work were done mostly by me.
-- Ensure your movie and cover image file names and paths in `db.json` exactly match what’s in your `static` folders.  
+- Ensure your movie and cover image file names and paths in `db.json` exactly match what’s in your `static` folders.
 - To add more movies, add new numbered keys in `db.json` (`"2"`, `"3"`, etc.) with the same structure.
 
 ---
 
 ## Tech Stack
 
-- Python Flask (backend)  
-- HTML/CSS/JS (frontend)  
-- JSON file as simple database  
+- Python Flask (backend)
+- HTML/CSS/JS (frontend)
+- JSON file as simple database
 
 ---
 
